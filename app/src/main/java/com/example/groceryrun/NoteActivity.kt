@@ -24,6 +24,7 @@ class NoteActivity : AppCompatActivity() {
     private var map : HashMap<String, Int> = HashMap<String, Int> ()
     private var count = 2000    // start at 2000 just in case some previous ones were already initialized
     private var names: ArrayList<String> = ArrayList()   // item/ category names
+    private  var textSize = 11; //text size of buttons
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -144,9 +145,16 @@ class NoteActivity : AppCompatActivity() {
             ll.orientation = LinearLayout.HORIZONTAL
 
             val tv = TextView(this)
+            tv.setMaxWidth(350);
+            tv.setMinWidth(350);
             tv.setText(enterItem.getText().toString())
 
+
+
             val removeButton = Button(this)
+            removeButton.minimumWidth = 130;
+            removeButton.maxWidth = 130;
+            removeButton.textSize = textSize.toFloat();
             removeButton.text = "Remove Item"
             removeButton.id = count
             removeButton.setOnClickListener(object : View.OnClickListener {
@@ -156,6 +164,9 @@ class NoteActivity : AppCompatActivity() {
             })
 
             val findButton = Button(this)
+            findButton.minimumWidth = 130;
+            findButton.maxWidth = 130;
+            findButton.textSize = textSize.toFloat();
             findButton.text = "Find Item"
             findButton.id = count + 1
 
