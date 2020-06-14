@@ -8,6 +8,13 @@
     android:layout_height="match_parent"
     tools:context=".NoteActivity">
 
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <Button
         android:id="@+id/checkoutButton"
         android:layout_width="249dp"
