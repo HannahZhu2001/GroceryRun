@@ -39,7 +39,7 @@ class NoteActivity : AppCompatActivity() {
                 var itemDetail = itemArray.getJSONObject(i)
                 var name = itemDetail.getString("name");
 
-                     names.add(name);
+                names.add(name);
 
                 Log.i("Item loaded from json: ", name)
             }
@@ -81,11 +81,11 @@ class NoteActivity : AppCompatActivity() {
             enterItem.getText().clear()
             //CAN'T SAY I UNDERSTAND ANY PART OF THE REST OF THIS PART OF THE IF STATEMENT
             //https://stackoverflow.com/questions/5944987/how-to-create-a-popup-window-popupwindow-in-android was super helpful
-              // inflate the layout of the popup window
+            // inflate the layout of the popup window
             val inflater =
                 getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val popupView: View = inflater.inflate(R.layout.popup_window, null)
-        // create the popup window
+            // create the popup window
             val width = LinearLayout.LayoutParams.WRAP_CONTENT
             val height = LinearLayout.LayoutParams.WRAP_CONTENT
             val focusable = true // lets taps outside the popup also dismiss it
